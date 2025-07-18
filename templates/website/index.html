@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ماشین حساب ساده</title>
+  </head>
+  <body>
+    <h2>ماشین حساب ساده</h2>
+    <form method="post">
+      {% csrf_token %}
+      <input
+        type="number"
+        step="any"
+        name="num1"
+        placeholder="عدد اول"
+        required
+      />
+      <input
+        type="number"
+        step="any"
+        name="num2"
+        placeholder="عدد دوم"
+        required
+      />
+      <select name="operation">
+        <option value="add">جمع</option>
+        <option value="subtract">تفریق</option>
+        <option value="multiply">ضرب</option>
+        <option value="divide">تقسیم</option>
+      </select>
+      <button type="submit">محاسبه</button>
+    </form>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+      dolore, nostrum repellat unde iste consectetur quis numquam iure labore
+      recusandae quod repellendus harum.
+    </p>
+
+    {% if result is not None %}
+    <h3>نتیجه: {{ result }}</h3>
+    {% endif %}
+  </body>
+</html>

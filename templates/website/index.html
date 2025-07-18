@@ -1,8 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <title>ماشین حساب ساده</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <h2>ماشین حساب ساده</h2>
@@ -30,11 +33,7 @@
       </select>
       <button type="submit">محاسبه</button>
     </form>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
-      dolore, nostrum repellat unde iste consectetur quis numquam iure labore
-      recusandae quod repellendus harum.
-    </p>
+    <p>این ماشین حساب ساده شامل جمع، تفریق، ضرب و تقسیم است.</p>
 
     {% if result is not None %}
     <h3>نتیجه: {{ result }}</h3>

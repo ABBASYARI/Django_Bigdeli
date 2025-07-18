@@ -20,4 +20,16 @@ def calculator_view(request):
         except Exception as e:
             result = "خطا: " + str(e)
 
-    return render(request, "website/index.html", {"result": result})
+    return render(request, "website/calculator.html", {"result": result})
+
+
+def index(request):
+    return render(request, "website/index.html")
+
+
+def about(request):
+    return render(request, "website/about.html")
+
+
+def contact(request):
+    return render(request, "website/contact.html")

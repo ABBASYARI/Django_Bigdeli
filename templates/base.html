@@ -74,8 +74,8 @@
               <li class="menu-has-children">
                 <a href="">Blog</a>
                 <ul>
-                  <li><a href="blog-home.html">Blog Home</a></li>
-                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="{% url 'blog:blog' %}">Blog Home</a></li>
+                  <li><a href="{% url 'blog:single' %}">Blog Single</a></li>
                 </ul>
               </li>
               <li class="menu-has-children">
@@ -91,11 +91,7 @@
                   </li>
                 </ul>
               </li>
-              <<<<<<< HEAD
               <li><a href="{% url 'website:contact' %}">Contact</a></li>
-              =======
-              <li><a href="contact.html">Contact</a></li>
-              >>>>>>> d7d720803a1c2b1e2950ca1b5cd542ebad9228cf
             </ul>
           </nav>
           <!-- #nav-menu-container -->
